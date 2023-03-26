@@ -1,24 +1,31 @@
-from pathlib import Path
+# ATTEMPT PYTHON 3 IMPORTS
+try:
+    import tkinter as tk
+    import tkinter.ttk as ttk
+    import tkinter.messagebox as msgbox
+    import tkinter.filedialog as fdlg
+# FALL BACK TO PYTHON 2
+except ImportError:
+    import Tkinter as Tk
+    import Tkinter.ttk as Ttk
+    import Tkinter.messagebox as Msgbox
+    import Tkinter.filedialog as Fdlg
 
-# from tkinter import *
-# Explicit imports to satisfy Flake8
-import tkinter as tk
-from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
-from tkinter import ttk
-from tkinter import filedialog
-from PIL import Image, ImageTk
-import os as ossrvcs
 import PIL as pil
 import pandas as pd
+import os as ossrvcs
 import pypdf as pdf
 
 NAME = "PDF Utility"
 VER = "1.0"
 PHASE = "alpha"
 BRANCH = "main"
-BUILD = "26032023-0419"
-ALLCLIENTENV = ["dev", "client","prod"]
-CLIENTENV = ALLCLIENTENV[0]
+BUILD = "24032023-1126"
+CLIENTENV = {"dev", 
+    {
+        "client": "prod",
+    }
+} #dev, client-test, client-prod
 
 BUILD_TAG_FULL = NAME + "\nVer. " + VER + "." + BUILD + "." + BRANCH + " (" + PHASE + ")\nFor testing purposes only."
 
@@ -32,9 +39,7 @@ if DEV:
     TITLE = TITLE + WIN_BRC_TITLE
 
 # Window Properties
-X_RES = 800
-Y_RES = 600
-GEOMETRY = str(X_RES)+"x"+str(Y_RES)
+GEOMETRY = "800x600"
 
 # global strings
 NOT_DONE_YET = "Not implemented yet..."
