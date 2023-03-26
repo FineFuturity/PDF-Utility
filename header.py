@@ -15,7 +15,7 @@ import pypdf as pdf
 NAME = "PDF Utility"
 VER = "1.0"
 PHASE = "alpha"
-BRANCH = "dev.main_refactor"
+BRANCH = "main"
 BUILD = "26032023-0419"
 ALLCLIENTENV = ["dev", "client","prod"]
 CLIENTENV = ALLCLIENTENV[0]
