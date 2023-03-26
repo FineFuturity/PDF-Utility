@@ -19,7 +19,7 @@ import pypdf as pdf
 NAME = "PDF Utility"
 VER = "1.0"
 PHASE = "alpha"
-BRANCH = "main"
+BRANCH = "main.dev_prev_code"
 BUILD = "24032023-1126"
 CLIENTENV = {"dev", 
     {
